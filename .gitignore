@@ -13,11 +13,35 @@ dist-ssr
 *.local
 
 # Editor directories and files
+.vscode/
 !.vscode/extensions.json
 .idea
 .DS_Store
+Thumbs.db
+desktop.ini
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# TypeScript
+*.tsbuildinfo
+
+# Vite / tool caches
+.vite
+.cache
+.eslintcache
+
+# Environment files (Vite)
+.env
+.env.*
+!.env.example
+
+# Test coverage / reports
+coverage
+c8-report
+
+# Package managers (optional caches)
+.pnpm-store
+*.tgz
