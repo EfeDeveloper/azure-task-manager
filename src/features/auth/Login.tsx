@@ -19,7 +19,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 
-import { useLoginController } from "./LoginController";
+import { useLoginController } from "./useLoginController";
 
 export default function Login() {
   const { form, onSubmit, error } = useLoginController();
