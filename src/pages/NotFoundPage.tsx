@@ -17,16 +17,16 @@ export default function NotFoundPage() {
           404
         </h2>
         <h1 className="mb-3 font-semibold text-3xl sm:text-4xl leading-tight">
-          Página no encontrada
+          Page not found
         </h1>
         <p className="mx-auto mb-8 max-w-prose text-muted-foreground text-sm sm:text-base text-balance">
-          La URL que intentas visitar no existe o fue movida. Revisa el enlace o vuelve a
-          una ruta conocida.
+          The page you&#39;re looking for doesn&#39;t exist or may have been moved. Check
+          the URL or go back to a known route.
         </p>
 
         <div className="flex justify-center items-center">
-          <Button onClick={() => navigate(-1)} aria-label="Volver atrás">
-            <ArrowLeft className="mr-2 size-4" /> Volver atrás
+          <Button onClick={() => navigate(-1)} aria-label="Go back">
+            <ArrowLeft className="mr-2 size-4" /> Go back
           </Button>
         </div>
       </section>
