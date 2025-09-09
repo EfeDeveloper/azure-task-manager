@@ -1,18 +1,18 @@
-import React, { lazy, Suspense } from 'react';
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import React, { lazy, Suspense } from "react";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
-import { AppLayout } from '@/components/AppLayout';
-import { AppRoutes } from '@/constants/routes';
+import { AppLayout } from "@/components/AppLayout";
+import { AppRoutes } from "@/constants/routes";
 
-const LoginPage = lazy(() => import('@/pages/LoginPage'));
-const DashboardPage = lazy(() => import('@/pages/DashboardPage'));
-const TareasPage = lazy(() => import('@/pages/TareasPage'));
-const TareasExtrasPage = lazy(() => import('@/pages/TareasExtrasPage'));
-const NotFoundPage = lazy(() => import('@/pages/NotFoundPage'));
+const LoginPage = lazy(() => import("@/pages/LoginPage"));
+const DashboardPage = lazy(() => import("@/pages/DashboardPage"));
+const TareasPage = lazy(() => import("@/pages/TareasPage"));
+const TareasExtrasPage = lazy(() => import("@/pages/TareasExtrasPage"));
+const NotFoundPage = lazy(() => import("@/pages/NotFoundPage"));
 
 const isAuthenticated = () => {
-  if (sessionStorage.getItem('auth') === '1') return true;
-  if (localStorage.getItem('auth') === '1') return true;
+  if (sessionStorage.getItem("auth") === "1") return true;
+  if (localStorage.getItem("auth") === "1") return true;
   return false;
 };
 
@@ -36,8 +36,8 @@ export default function AppRouter() {
             }
           >
             <Route path={AppRoutes.Dashboard} element={<DashboardPage />} />
-            <Route path={AppRoutes.Tareas} element={<TareasPage />} />
-            <Route path={AppRoutes.TareasExtras} element={<TareasExtrasPage />} />
+            <Route path={AppRoutes.WorkItem} element={<TareasPage />} />
+            <Route path={AppRoutes.ExtraWorkItem} element={<TareasExtrasPage />} />
           </Route>
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
