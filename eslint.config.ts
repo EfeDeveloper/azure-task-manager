@@ -24,6 +24,8 @@ export default defineConfig([
       "simple-import-sort/exports": "error",
       // React 17+ / automatic runtime
       "react/react-in-jsx-scope": "off",
+      // Using TypeScript, no need for prop-types
+      "react/prop-types": "off",
       // Align ESLint quotes with Prettier (double quotes)
       quotes: ["error", "double", { avoidEscape: true }],
     },

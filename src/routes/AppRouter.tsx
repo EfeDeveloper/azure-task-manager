@@ -1,13 +1,14 @@
 import React, { lazy, Suspense } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
+import AppFallback from "@/components/AppFallback";
 import { AppLayout } from "@/components/AppLayout";
 import { AppRoutes } from "@/constants/routes";
 
 const LoginPage = lazy(() => import("@/pages/LoginPage"));
 const DashboardPage = lazy(() => import("@/pages/DashboardPage"));
-const TareasPage = lazy(() => import("@/pages/TareasPage"));
-const TareasExtrasPage = lazy(() => import("@/pages/TareasExtrasPage"));
+const TareasPage = lazy(() => import("@/pages/WorkItemPage"));
+const TareasExtrasPage = lazy(() => import("@/pages/ExtraWorkItemPage"));
 const NotFoundPage = lazy(() => import("@/pages/NotFoundPage"));
 
 const isAuthenticated = () => {
@@ -24,7 +25,7 @@ function PrivateRoute({ children }: { children: React.ReactElement }) {
 export default function AppRouter() {
   return (
     <BrowserRouter>
-      <Suspense fallback={<div style={{ padding: 32 }}>Cargando...</div>}>
+      <Suspense fallback={<AppFallback />}>
         <Routes>
           <Route path="/" element={<Navigate to={AppRoutes.Login} replace />} />
           <Route path={AppRoutes.Login} element={<LoginPage />} />
