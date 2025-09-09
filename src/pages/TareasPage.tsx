@@ -1,3 +1,3 @@
 export default function TareasPage() {
-  return <div> Tareas Page</div>;
+  return <div>Tareas Page</div>;
 }
