@@ -1,12 +1,17 @@
 {
   "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // Keep ESLint autofix but let Prettier own formatting
   "editor.codeActionsOnSave": {
     "source.organizeImports": "always",
     "source.fixAll.eslint": "always"
   },
+  // Normalize EOL and quoting behavior to match Prettier config
+  "files.eol": "auto",
+  "prettier.singleQuote": false,
+  "prettier.jsxSingleQuote": false,
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "javascript.preferences.importModuleSpecifier": "non-relative",
   "typescript.preferences.importModuleSpecifierEnding": "auto",
-  "javascript.preferences.importModuleSpecifierEnding": "auto",
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "javascript.preferences.importModuleSpecifierEnding": "auto"
 }

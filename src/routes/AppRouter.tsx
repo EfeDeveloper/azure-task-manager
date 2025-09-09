@@ -1,7 +1,8 @@
-import { AppLayout } from '@/components/AppLayout';
-import { AppRoutes } from '@/constants/routes';
 import React, { lazy, Suspense } from 'react';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+
+import { AppLayout } from '@/components/AppLayout';
+import { AppRoutes } from '@/constants/routes';
 
 const LoginPage = lazy(() => import('@/pages/LoginPage'));
 const DashboardPage = lazy(() => import('@/pages/DashboardPage'));
